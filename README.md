@@ -4,6 +4,17 @@ Repository with miscelous docker utils.
 
 ## List of utils
 
+### composite docker-compose
+
+I split my services into different directories. For management I was using following alias for long time already.
+
+```
+alias docker-compose='docker-compose $(for file in `find . -name docker-compose.yml`; do echo "-f $file "; done)'
+```
+
+But I had to go to the / of my docker-compose tree every time I run docker-compose command. Short extension helped me and now command is working from any directory with docker-compose.yaml file.
+
+
 ### find dependent child images
 
 During cleanup on my docker host and found some old alpine base images with unknown dependend child. I was trying several tools and scripts but all fails in one specific case. Thats why I created this small script with recursion.
