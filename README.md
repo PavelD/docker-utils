@@ -12,7 +12,7 @@ I split my services into different directories. For management I was using follo
 alias docker-compose='docker-compose $(for file in `find . -name docker-compose.yml`; do echo "-f $file "; done)'
 ```
 
-But I had to go to the / of my docker-compose tree every time I run docker-compose command. Short extension helped me and now command is working from any directory with docker-compose.yaml file.
+But I had to go to the / of my docker-compose tree every time I run docker-compose command. Short script helped me and now command is working from any directory with docker-compose.yaml file as well as from the root directory with no docker-compose.yml file.
 
 
 ### find dependent child images
