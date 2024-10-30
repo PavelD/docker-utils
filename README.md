@@ -20,7 +20,6 @@ curretly I put new script on my $PATH and create simple alias.
 alias docker-compose='docker-compose.sh'
 ```
 
-
 ### find dependent child images
 
 During cleanup on my docker host and found some old alpine base images with unknown dependend child. I was trying several tools and scripts but all fails in one specific case. Thats why I created this small script with recursion.
